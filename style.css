@@ -2157,6 +2157,8 @@ footer {
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
+    display: block;
+    aspect-ratio: 16/9;
 }
 
 .edu-card span {
@@ -2234,10 +2236,10 @@ footer {
 }
 .edu-zoom-badge svg { width: 16px; height: 16px; fill: currentColor; opacity: .95; }
 
-/* Make certificate thumbnails square and adjust spacing */
+/* Make all education section images consistent like LPU image */
 #certifications .edu-img-wrap {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: 220px;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -2284,6 +2286,45 @@ footer {
         width: 80%;
     }
 }
+/* ---------- Lazy Loading and Performance Optimizations ---------- */
+/* Smooth loading transitions for images - excluding education section */
+img:not(.edu-card img) {
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"]:not(.edu-card img) {
+  opacity: 0.7;
+}
+
+img.loaded:not(.edu-card img) {
+  opacity: 1;
+}
+
+/* Loading placeholder for images - excluding education section */
+img[loading="lazy"]:not(.loaded):not(.edu-card img) {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Critical images should load immediately */
+img[loading="eager"] {
+  opacity: 1;
+}
+
+/* Education section images - maintain original styling without lazy loading effects */
+.edu-card img {
+  opacity: 1 !important;
+  transition: none !important;
+  background: none !important;
+  animation: none !important;
+}
+
 /* ---------- Responsive layout for Education & Certifications ---------- */
 @media (max-width: 1100px) {
     .education-section { width: 80%; }
@@ -2299,9 +2340,12 @@ footer {
     .edu-cards { flex-wrap: wrap; gap: 18px; }
     .edu-card { flex: 0 0 100%; }
     .edu-tab { font-size: 1.5rem; padding: 14px 0; }
-    .edu-card img { height: 180px; }
-    /* keep certificate thumbnails square */
-    #certifications .edu-img-wrap { aspect-ratio: 1 / 1; }
+    .edu-card img { 
+        height: 180px; 
+        aspect-ratio: 16/9;
+    }
+    /* keep all images consistent like LPU image */
+    #certifications .edu-img-wrap { height: 180px; }
 }
 
 @media (max-width: 480px) {
@@ -2309,7 +2353,12 @@ footer {
     .edu-tabs { margin: 30px auto 20px; }
     .edu-tab { font-size: 1.4rem; padding: 12px 0; gap: 8px; }
     .edu-zoom-badge { font-size: 1.1rem; padding: 5px 8px; }
-    .edu-card img { height: 160px; }
+    .edu-card img { 
+        height: 160px; 
+        aspect-ratio: 16/9;
+    }
+    /* keep all images consistent like LPU image */
+    #certifications .edu-img-wrap { height: 160px; }
     .education-section-container { scroll-margin-top: 120px; }
     #education { scroll-margin-top: 120px; }
 }

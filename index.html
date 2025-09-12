@@ -15,13 +15,17 @@
 
   <title>Snehasish Dey | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  
+  <!-- Preload critical resources for LCP optimization -->
+  <link rel="preload" href="src/webp/snehasish2.jpg" as="image" type="image/jpeg" />
+  <link rel="preload" href="src/png/nav-avatar.png" as="image" type="image/png" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" /></noscript>
+  
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <!-- google fonts-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
 
 <body class="body">
   <audio loop="" id="audioPlayer" style="display: none">
@@ -38,7 +42,7 @@
       <div class="hey">Hey!</div>
       <div class="logo" tabindex="0" aria-label="vinod jangid logo">
         <div class="logo-top">
-          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar" loading="eager" />
         </div>
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
@@ -270,7 +274,7 @@
           </div>
 
           <div class="dp" data-aos="fade-up">
-            <img src="src/webp/snehasish2.jpg" alt="Snehasish Dey" tabindex="0" aria-label="image of Snehasish" />
+            <img src="src/webp/snehasish2.jpg" alt="Snehasish Dey" tabindex="0" aria-label="image of Snehasish" loading="eager" />
           </div>
         </div>
       </div>
@@ -312,19 +316,19 @@
             <div class="edu-section edu-active" id="education">
               <div class="edu-cards">
                 <div class="edu-card" style="animation-delay:0.1s">
-                  <img src="src/webp/lpu.webp" alt="LPU" />
+                  <img src="src/webp/lpu.webp" alt="LPU" loading="lazy" />
                   <p><b>Lolvely Professional University, Jalandhar, Punjab</b></p>
                   <span>2023 — 2025</span>
                   <p>MCA with <strong>CGPA 8.2</strong>. Specialized in software engineering, DBMS & full‑stack development.</p>
                 </div>
                 <div class="edu-card" style="animation-delay:0.2s">
-                  <img src="src/webp/mscUnivercity.jpg" alt="MSCBU" />
+                  <img src="src/webp/mscUnivercity.jpg" alt="MSCBU" loading="lazy" />
                   <p><b>Maharaja Sriram Chandra Bhanjdeo University, Odisha</b></p>
                   <span>2020 — 2023</span>
                   <p>B.Sc. Physics with <strong>CGPA 9.03</strong>. Strengthened problem‑solving & logical reasoning skills.</p>
                 </div>
                 <div class="edu-card" style="animation-delay:0.3s">
-                  <img src="src/webp/princeCollege.jpeg" alt="Prince College" />
+                  <img src="src/webp/princeCollege.jpeg" alt="Prince College" loading="lazy" />
                   <p><b>Prince College of Science, Baripada, Odisha</b></p>
                   <span>2019 — 2020</span>
                   <p>Higher Secondary (Science) with <strong>76.77%</strong>. Built strong fundamentals in Physics & Math.</p>
@@ -337,7 +341,7 @@
               <div class="edu-cards">
                 <div class="edu-card" style="animation-delay:0.1s">
                   <div class="edu-img-wrap">
-                    <img src="src/webp/phpCertificate.png" alt="Internship" />
+                    <img src="src/webp/phpCertificate.png" alt="Internship" loading="lazy" />
                     <span class="edu-zoom-badge" aria-hidden="true">
                       <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                       <span>Zoom</span>
@@ -350,7 +354,7 @@
                 </div>
                 <div class="edu-card" style="animation-delay:0.2s">
                   <div class="edu-img-wrap">
-                    <img src="src/webp/frontendCertificate.png" alt="Java" />
+                    <img src="src/webp/frontendCertificate.png" alt="Java" loading="lazy" />
                     <span class="edu-zoom-badge" aria-hidden="true">
                       <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                       <span>Zoom</span>
@@ -363,7 +367,7 @@
                 </div>
                 <div class="edu-card" style="animation-delay:0.3s">
                   <div class="edu-img-wrap">
-                    <img src="src/webp/javaCertificate.png" alt="Frontend" />
+                    <img src="src/webp/javaCertificate.png" alt="Frontend" loading="lazy" />
                     <span class="edu-zoom-badge" aria-hidden="true">
                       <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                       <span>Zoom</span>
@@ -400,97 +404,97 @@
           </h3>
           <ul class="tech-stack-wrapper">
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
+              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">HTML</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
+              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">CSS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/bootstraplogo.png" alt="bootstrap skill" class="tech-stack-logo" />
+              <img src="./src/png/bootstraplogo.png" alt="bootstrap skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">BOOTSTRAP</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
+              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">JS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" />
+              <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">REACTJS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/expressjslogo.png" alt="expressjs skill" class="tech-stack-logo" />
+              <img src="./src/png/expressjslogo.png" alt="expressjs skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">EXPRESSJS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/node.png" alt="nodejs skill" class="tech-stack-logo" />
+              <img src="./src/png/node.png" alt="nodejs skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">NODEJS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
+              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" loading="lazy" />
               <span class="tooltip">GITHUB</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
+              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">GIT</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/clogo.png" alt="c language skill" class="tech-stack-logo" />
+              <img src="./src/png/clogo.png" alt="c language skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">C</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/cpplogo.png" alt="c++ language skill" class="tech-stack-logo" />
+              <img src="./src/png/cpplogo.png" alt="c++ language skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">C++</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/javalogo.png" alt="Java language skill" class="tech-stack-logo" />
+              <img src="./src/png/javalogo.png" alt="Java language skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">JAVA</span>
             </li>
             
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/phplogo.png" alt="php skill" class="tech-stack-logo" />
+              <img src="./src/png/phplogo.png" alt="php skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">PHP</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/mysqllogo.png" alt="php skill" class="tech-stack-logo" />
+              <img src="./src/png/mysqllogo.png" alt="php skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">MY SQL</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/linuxlogo.png" alt="photoshop skill" class="tech-stack-logo" />
+              <img src="./src/png/linuxlogo.png" alt="photoshop skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">LINUX SHELL SCRIPTING</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/pslogo.png" alt="photoshop skill" class="tech-stack-logo" />
+              <img src="./src/png/pslogo.png" alt="photoshop skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">ADOBE PS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/figmalogo.png" alt="figma skill" class="tech-stack-logo" />
+              <img src="./src/png/figmalogo.png" alt="figma skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">FIGMA</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/canvalogo.png" alt="canva skill" class="tech-stack-logo" />
+              <img src="./src/png/canvalogo.png" alt="canva skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">CANVA</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/ailogo.png" alt="adobe illustrator skill" class="tech-stack-logo" />
+              <img src="./src/png/ailogo.png" alt="adobe illustrator skill" class="tech-stack-logo" loading="lazy" />
               <span class="tooltip">ADOBE AI</span>
             </li>
           </ul>
@@ -510,10 +514,10 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="src/webp/asher-favicon.webp" alt="atomic asher website favicon" class="faviconforProject" />
+                <img src="src/webp/asher-favicon.webp" alt="atomic asher website favicon" class="faviconforProject" loading="lazy" />
                 <article class="ProjectHeading">Soul of India Website</article>
                 <p class="ProjectDescription">
-                  Soul of India : An interactive web platform designed to preserve and showcase India’s cultural heritage, featuring modules on festivals, dance, cuisine, and architecture.
+                  Soul of India : An interactive web platform designed to preserve and showcase India's cultural heritage, featuring modules on festivals, dance, cuisine, and architecture.
                 </p>
                 <div class="project-buttons">
                   <a href="https://atomicasher.com" target="_blank" class="cta"
@@ -527,7 +531,7 @@
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/soulofindia.png" alt="atomicasher website preview image" />
+                <img src="src/webp/soulofindia.png" alt="atomicasher website preview image" loading="lazy" />
               </div>
             </div>
           </div>
@@ -535,7 +539,7 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="src/ico/stopscams-favicon.ico" alt="stopscams website favicon" class="faviconforProject" />
+                <img src="src/ico/stopscams-favicon.ico" alt="stopscams website favicon" class="faviconforProject" loading="lazy" />
                 <article class="ProjectHeading">Fitneed Gym Website</article>
                 <p class="ProjectDescription">
                   FitNeed : A responsive gym website showcasing workout categories, membership plans, and user signup/login functionality.
@@ -552,7 +556,7 @@
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/fitneed_gym.png" alt="stopscams website preview image" />
+                <img src="src/webp/fitneed_gym.png" alt="stopscams website preview image" loading="lazy" />
               </div>
             </div>
           </div>
@@ -560,7 +564,7 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="src/ico/notesync-favicon.ico" alt="notesync website favicon" class="faviconforProject" />
+                <img src="src/ico/notesync-favicon.ico" alt="notesync website favicon" class="faviconforProject" loading="lazy" />
                 <article class="ProjectHeading">Camera Club</article>
                 <p class="ProjectDescription">
                   Camera Club : A photography portfolio website designed to showcase creative works through a blog, gallery, and interactive search. 
@@ -568,7 +572,7 @@
                 <div class="project-buttons">
                   <a href="https://github.com/deysnehasish51/Camera-Club" target="_blank" class="github-redirect"
                     aria-label="Visit Camera Club on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
+                    <img src="src/svg/github.svg" alt="github redirect button" loading="lazy" />
                   </a>
                   <a href="https://camera-club.vercel.app/" target="_blank" class="cta"
                     aria-label="Visit NoteSync Live">
@@ -581,7 +585,7 @@
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/camera_club.png" alt="NoteSync website preview image" />
+                <img src="src/webp/camera_club.png" alt="NoteSync website preview image" loading="lazy" />
               </div>
             </div>
           </div>
@@ -589,7 +593,7 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="src/ico/wyd-favicon.ico" alt="withyourdog website favicon" class="faviconforProject" />
+                <img src="src/ico/wyd-favicon.ico" alt="withyourdog website favicon" class="faviconforProject" loading="lazy" />
                 <article class="ProjectHeading">Disaster Shield</article>
                 <p class="ProjectDescription">
                   Disaster Shield : A web platform providing real-time information, safety guidelines, and emergency contacts for disaster preparedness and response.
@@ -606,7 +610,7 @@
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/disasterManagement.png" alt="withyourdog website preview image" />
+                <img src="src/webp/disasterManagement.png" alt="withyourdog website preview image" loading="lazy" />
               </div>
             </div>
           </div>
@@ -614,7 +618,7 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" />
+                <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" loading="lazy" />
                 <article class="ProjectHeading">Interior Home & Furniture Design Website</article>
                 <p class="ProjectDescription">
                   Interior Home & Furniture Design : A web platform showcasing modern furniture collections, styles, and room arrangements.
@@ -622,7 +626,7 @@
                 <div class="project-buttons">
                   <a href="https://github.com/deysnehasish51/Interior-Home-Furniture-Website" target="_blank" class="github-redirect"
                     aria-label="Visit Interior Home Design Website on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
+                    <img src="src/svg/github.svg" alt="github redirect button" loading="lazy" />
                   </a>
                   <a href="https://interior-home-furniture-website.vercel.app/" target="_blank" class="cta"
                     aria-label="Visit Interior Home Design Live">
@@ -635,7 +639,7 @@
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/interior_design.png" alt="Pexelicon website preview image" />
+                <img src="src/webp/interior_design.png" alt="Pexelicon website preview image" loading="lazy" />
               </div>
             </div>
           </div>
@@ -692,7 +696,7 @@
           </div>
         </div>
         <div class="footer-avatar-container">
-          <img src="src/png/footer-avatar-snehasish.png" alt="animation-head" class="footer-avatar-img" id="footer-wala-avatar"/>
+          <img src="src/png/footer-avatar-snehasish.png" alt="animation-head" class="footer-avatar-img" id="footer-wala-avatar" loading="lazy" />
           <div class="footer-avatar-face">
             <div class="footer-avatar-eye footer-left-eye">
               <div class="footer-pupil"></div>
@@ -714,6 +718,50 @@
   <!-- footer ends here -->
 
   <script src="main.js"></script>
+
+  <!-- Enhanced Lazy Loading with Intersection Observer -->
+  <script>
+    (function() {
+      // Enhanced lazy loading with intersection observer
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+              }
+              img.classList.add('loaded');
+              observer.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.01
+        });
+
+        // Observe all lazy images
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+
+      // Preload critical images for LCP
+      const criticalImages = [
+        'src/webp/snehasish2.jpg',
+        'src/png/nav-avatar.png'
+      ];
+
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    })();
+  </script>
 
   <!-- Education tabs and scroll scripts moved to bottom for proper load order -->
   <script>
